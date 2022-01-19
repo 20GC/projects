@@ -1,0 +1,44 @@
+
+body {
+	background-color: white;
+}
+
+#content {
+	position: absolute;
+	text-align: center;
+	length: 40%;
+	width: 70%;
+	top: 35%;
+	left: 15%;
+	font-size: 16;
+}
+
+#rgbbuttons {
+	position: absolute;
+	text-align: center;
+	length: 10%;
+	width: 26%;
+	top: 5%;
+	left: 37%;
+	right: 37%;
+}
+
+#sizebuttons {
+	position: absolute;
+	text-align: center;
+	length: 10%;
+	width: 18%;
+	top: 10%;
+	left: 41%;
+	right: 41%;
+}
+
+#rgbinput {
+	position: absolute;
+	text-align: center;
+	length: 10%;
+	width: 26%;
+	top: 17%;
+	left: 37%;
+	right: 37%;
+}
