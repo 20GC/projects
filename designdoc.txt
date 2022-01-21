@@ -1,0 +1,67 @@
+SERVERSIDE- GET SERVER RUNNING
+1. Authentication
+	-Create username (that's not taken) and password.
+	-Use username as player token in database
+2. User tracking
+	-Wins/losses, amount of games, maybe moves made all saved to part of player token (username)
+3. Multiplayer/Networking
+4. Player Interaction
+(don't know enough for detail yet)
+
+
+
+CHESS GAME- NEEDS PLAYER INTERACTION (MAY BE TIC TAC TOE, WHICH IS DONE)
+Data:
+-GameOver variable [global] (can be tied to checkMate?)
+-Locations of pieces [local, movement] (hash function or double array, name to tile?)
+-Turns [global] (per move, change 1 to 0 or 0 to 1)
+-Black/White piece difference [local, movement] (name scheme with 'w' or 'b' as beginning, or 0-15 white and 16-31 black?)
+-Pieces no longer in play / pieces in play [local, movement] (set tile to -1, if tile not -1, in play?)
+-Check or Not Check [global]
+-What a click does [global?] (click to select a piece, or click to select where to move?)
+-What each piece does [global?] (method of movement connected to name scheme?)
+
+Architecture:
+-Title screen
+-Find a friend screen?
+-Change screen when game made and connected
+-Click input, multiple clicks per turn
+-Screen change output to move pieces or take pieces
+-Game over screen
+
+User Interface:
+Very simplistic chess. Solid color, light grass green background, basic "Chess" or "Garrett Chase's Chess"
+title, "New Game" button, maybe "Options" button for background color or something?
+Board is simple grid, light brown and dark brown tiles with an in-between color trim. Pieces are custom
+paint images or free-use 2D chess piece images. 
+
+Procedural:
+-On load, load buttons, background color, title name.
+-On button press, either load into game or load "Here's a code for your friend, or enter a code" screen to connect.
+-Load game by loading board lines and colors, track if each tile is clicked (or background), load pieces in position.
+-Do not allow a player to select while not their turn.
+-White's turn, first click on a tile with a piece selects, click on background deselects, click on 
+	empty space OR enemy space within movement moves piece, then black's turn.
+-Pieces who were moved to by enemy should be put on side or disappear, unable to be selected.
+-Check forces only king to be selected, or selection of pieces who's movement kills or blocks piece.
+-Checkmate when king cannot move or kill and when no other piece can block or kill
+-Game Over screen if checkmate, 'Exit' button back to title or 'Play Again' button with same function as New Game button
+
+
+
+PLAN- (Each item is what should be done at the end of the week, not the beginning)
+Week 1 (Jan 16 - 22): Plan out chess project, download necessary programs, get ready to begin coding
+Week 2 (Jan 23 - 29): Have server running, begin authentication
+Week 3 (Jan 30 - Feb 5): Authentication done, connect user stats to webpage
+Week 4 (Feb 6 - 12): User stats trackable, begin multiplayer capability
+Week 5 (Feb 13 - 19): Continue
+Week 6 (Feb 20 - 26): Finish multiplayer cability
+Week 7 (Feb 27 - Mar 5): If all serverside parts are stable, create 'global' chat feature or start game code if necessary
+Week 8 (Mar 6 - 12): Extra week to catch up, make chat, or anything else needed
+Week 9 (Mar 13 - 19): Begin game code
+Week 10 (Mar 20 - 26): Continute
+Week 11 (Mar 27 - Apr 2): Finish game code
+Week 12 (Apr 3 - 9): Put it all together
+Week 13 (Apr 10 - 16): Extra week to debug / make things look nice
+Week 14 (Apr 17 - 23): Have a functioning game with online authentication, stats, and matchmaking (semi-public). Begin portfolio
+Week 15 (Apr 24 - 30): Have a simple online portfolio, hosting download links to project files and a link to the game project
