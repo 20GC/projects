@@ -50,11 +50,11 @@ Procedural:
 
 
 PLAN- (Each item is what should be done at the end of the week, not the beginning)
-Week 1 (Jan 16 - 22): Plan out chess project, download necessary programs, get ready to begin coding
-Week 2 (Jan 23 - 29): Have server running, begin authentication
-Week 3 (Jan 30 - Feb 5): Authentication done, connect user stats to webpage
-Week 4 (Feb 6 - 12): User stats trackable, begin multiplayer capability
-Week 5 (Feb 13 - 19): Continue
+Week 1 (Jan 16 - 22): Plan out chess project, download necessary programs, get ready to begin coding (DONE)
+Week 2 (Jan 23 - 29): Have server running, begin authentication (DONE)
+Week 3 (Jan 30 - Feb 5): Authentication done, connect users via sockets
+Week 4 (Feb 6 - 12): Continue
+Week 5 (Feb 13 - 19): Stat tracking / multiplayer
 Week 6 (Feb 20 - 26): Finish multiplayer cability
 Week 7 (Feb 27 - Mar 5): If all serverside parts are stable, create 'global' chat feature or start game code if necessary
 Week 8 (Mar 6 - 12): Extra week to catch up, make chat, or anything else needed
