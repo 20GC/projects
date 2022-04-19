@@ -9,32 +9,23 @@ session_start();
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 		if(!empty($username) && !empty($password) && !is_numeric($username)) {
-			//read from database
-			$query = "select * from users where username = '$username' limit 1";
-			$result = mysqli_query($con,$query);
-			if($result) {
-				if($result && mysqli_num_rows($result) > 0) {
-					$user_data = mysqli_fetch_assoc($result);
-					if($user_data['password'] === $password) {
-						$_SESSION['userid'] = $user_data['userid'];
-						header("Location: index.php");
-						die;
-					}
-				}
-			}
-			echo "Wrong username or password.";
-		} 
+			//save to database
+			$userid = random_num(20);
+			$query = "insert into users (userid,username,password,wins,losses) values ('$userid','$username','$password',0,0)";
+			mysqli_query($con,$query);
+			header("Location: login.php");
+			die;
+		}
 		else {
 			echo "Please enter valid information.";
 		}
 	}
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tic Tac Toe Login</title>
+	<title>Tic Tac Toe Signup</title>
 </head>
 <body>
 	<style type="text/css">
@@ -64,12 +55,12 @@ session_start();
 
 	<div id="box">
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: white;">Log In</div>
+			<div style="font-size: 20px;margin: 10px;color: white;">Sign Up</div>
 			<input class="text" type="text" name="username"><br><br>
 			<input class="text" type="password" name="password"><br><br>
-			<input id="button" type="submit" value="Login"><br><br>
+			<input id="button" type="submit" value="Signup"><br><br>
 
-			<a href="signup.php">Click to Sign Up</a><br><br>
+			<a href="login.php">Click to Log In</a><br><br>
 		</form>
 	</div>
 </body>
